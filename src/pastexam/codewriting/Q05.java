@@ -17,6 +17,16 @@ public class Q05 {
 		System.out.println("Please enter a value for n: ");
 		int n = in.nextInt();
 		in.close();
-		
-	}
+
+		double total=0.0;
+		for(int i=1; i<=n; i++){
+			if(i%2==0){
+				total = total - 1 / (double)(i);
+			}
+			else{
+				total = total + 1 / (double)(i);
+			}
+		}
+		System.out.println(total);
+		}
 }

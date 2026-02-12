@@ -29,5 +29,37 @@ public class Q14 {
 		//works properly.
 		int[] data = {1, 2, 3}; 
 		
+		Scanner in = new Scanner(System.in);
+		System.out.println("Size of array? ");
+		int n = in.nextInt();
+
+
+		int[] matrix = new int[n];
+		for (int i=0;i<n;i++){
+			System.out.println("Index " +i+ " value: ");
+			matrix[i] = in.nextInt();
+		}
+
+		int[] mirror = new int[2*n];
+
+		for(int i=0;i<n;i++){
+			mirror[i] = matrix[i];
+		}
+		for (int i=0;i<n;i++){
+			mirror[(2*n)-i-1] = matrix[i];
+		}
+
+		System.out.println("Orginal Matrix: ");
+		for(int i=0;i<n;i++){
+		System.out.print(matrix[i] + " ");
+		}
+
+		System.out.println("");
+
+		System.out.println("Mirrored Matrix: ");
+		for(int i=0;i<2*n;i++){
+			System.out.print(mirror[i] + " ");
+		}
+
 	}
 }
